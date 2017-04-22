@@ -1,0 +1,182 @@
+/* Material Icons */
+.icon--2zpnS {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  // Preferred icon size
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    // Support for all WebKit browsers.
+    -webkit-font-smoothing: antialiased;
+    // Support for Safari and Chrome.
+    text-rendering: optimizeLegibility;
+    // Support for Firefox.
+    -moz-osx-font-smoothing: grayscale;
+    // Support for IE.
+    font-feature-settings: 'liga';
+}
+.fullsize--L5AGW {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.center--23NOW {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.section--2l_je {
+}
+.code--1h8Nt {
+    max-width: 850px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+.code--1h8Nt .CodeMirror-gutter-wrapper {
+    font-family: Roboto Mono, monospace;
+}
+.code--1h8Nt .CodeMirror-code {
+    line-height: 1.6em;
+}
+.code--1h8Nt .CodeMirror {
+    font-size: 0.8em;
+    height: auto;
+}
+.code--1h8Nt .CodeMirror pre {
+    font-family: Roboto Mono, monospace;
+}
+.page-container--3G7QE {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 24px;
+}
+.demo--2gtjt {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.demo--2gtjt hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+    padding: 0;
+}
+.demo-content--3SaU_ {
+    padding: 16px;
+}
+.demo-title--25VZJ {
+    padding: 8px;
+    padding-bottom: 0;
+}
+.table--2Mn1V {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8em;
+  text-align: left;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.table--2Mn1V thead tr {
+}
+.table--2Mn1V thead tr:last-child {
+    border: 0;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: #CCC;
+    border-color: #CCC;
+}
+.table--2Mn1V tbody tr {
+    border: 0;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: #CCC;
+    border-color: #CCC
+}
+.table--2Mn1V tbody tr:last-child {
+    border-bottom: 0;
+}
+.table--2Mn1V tbody tr:hover {
+    background: #EEEEEE;
+}
+.table--2Mn1V td, .table--2Mn1V th {
+    padding: 8px;
+}
+.layout--6c7P1 {
+    width: 100%;
+}
+
+.content-layout--2XxzE {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+
+.drawer-layout--LRqM_ {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    z-index: 10;
+    z-index: 10;
+    height: auto;
+}
+
+.inner-layout--25IYE {
+    width: 100%;
+    min-width: 512px;
+    padding-left: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-right: 16px;
+}
+
+.drawer--htI6R {
+}
+
+.toolbar--2ek3A {
+    /* Codemirror has z-index > 3 */
+    z-index: 11 !important;
+    z-index: calc(10 + 1) !important;
+    z-index: calc(10 + 1) !important;
+}
+
+.toolbar-title--1Kf8K {
+    color: white;
+    color: white;
+    text-decoration: none;
+}
+
+.toolbar-icon--14E40 {
+    padding-right: 16px;
+}
+
+.mdc-dialog--open {
+    /* Codemirror has z-index > 3 */
+    z-index: 12 !important;
+    z-index: calc(10 + 2) !important;
+    z-index: calc(10 + 2) !important;
+}
+
+/*# sourceMappingURL=local.css.map*/
