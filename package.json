@@ -71,7 +71,7 @@
     "start:webpack-dev-server": "webpack-dev-server --progress --config config/webpack/app.js",
     "start": "npm-run-all compile:vendor start:webpack-dev-server",
     "release:compile": "cross-env NODE_ENV=production npm run compile",
-    "release:gh-pages": "gh-pages -d . -m 'Update Docs' --remove node_modules --repo https://github.com/react-mdc/react-mdc.github.io.git",
+    "release:gh-pages": "gh-pages -d . -m 'Update Docs' --remove node_modules --repo https://github.com/react-mdc/react-mdc.github.io.git --branch master --dotfiles true",
     "release": "npm-run-all clean release:compile release:gh-pages"
   },
   "version": "0.1.0"
