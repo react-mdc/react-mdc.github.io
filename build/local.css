@@ -96,6 +96,9 @@
   margin-top: 24px;
   margin-bottom: 24px;
 }
+.table--2Mn1V tbody tr:hover {
+    background: #EEEEEE;
+}
 .table--2Mn1V thead tr {
 }
 .table--2Mn1V thead tr:last-child {
@@ -114,9 +117,6 @@
 }
 .table--2Mn1V tbody tr:last-child {
     border-bottom: 0;
-}
-.table--2Mn1V tbody tr:hover {
-    background: #EEEEEE;
 }
 .table--2Mn1V td, .table--2Mn1V th {
     padding: 8px;
