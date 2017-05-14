@@ -41,23 +41,10 @@ export default class ReactCodemirror extends React.Component<Props, State> {
         focused: false,
     };
 
-    private codeMirror: CodeMirror.EditorFromTextArea;
+    private codeMirror: CodeMirror.EditorFromTextArea | null = null;
 
     public componentWillMount() {
         this.componentWillReceiveProps = _.debounce(this.componentWillReceiveProps, 0);
-    }
-    public componentDidMount() {
-        const textareaNode = ReactDOM.findDOMNode(this.refs.textarea) as HTMLTextAreaElement;
-        if (textareaNode.tagName.toLowerCase() !== "textarea") {
-            throw new Error("Editor should be a textarea");
-        }
-        const codeMirrorInstance = this.getCodeMirrorInstance();
-        this.codeMirror = codeMirrorInstance.fromTextArea(textareaNode, this.props.options);
-        this.codeMirror.on("change", this.codemirrorValueChanged);
-        this.codeMirror.on("focus", this.focusChanged.bind(this, true));
-        this.codeMirror.on("blur", this.focusChanged.bind(this, false));
-        this.codeMirror.on("scroll", this.scrollChanged);
-        this.codeMirror.setValue(this.props.defaultValue || this.props.value || "");
     }
 
     public componentWillUnmount() {
@@ -79,7 +66,7 @@ export default class ReactCodemirror extends React.Component<Props, State> {
                 this.codeMirror.setValue(nextProps.value);
             }
         }
-        if (typeof nextProps.options === "object") {
+        if (this.codeMirror != null && typeof nextProps.options === "object") {
             for (const optionName in nextProps.options) {
                 if (nextProps.options.hasOwnProperty(optionName)) {
                     this.codeMirror.setOption(optionName, nextProps.options[optionName]);
@@ -95,7 +82,7 @@ export default class ReactCodemirror extends React.Component<Props, State> {
         );
         return (
             <div className={editorClassName}>
-                <textarea ref="textarea"
+                <textarea ref={this.handleTextAreaRef}
                     name={this.props.path}
                     defaultValue={this.props.value}
                     autoComplete="off" />
@@ -115,6 +102,26 @@ export default class ReactCodemirror extends React.Component<Props, State> {
 
     private getCodeMirrorInstance(): CodemirrorType {
         return this.props.codeMirrorInstance || CodeMirror;
+    }
+
+    private handleTextAreaRef = (textArea: React.ReactInstance | null) => {
+        if (textArea == null) {
+            return textArea;
+        }
+        const textareaNode = ReactDOM.findDOMNode(textArea) as HTMLTextAreaElement;
+
+        if (textareaNode.tagName.toLowerCase() !== "textarea") {
+            throw new Error("Editor should be a textarea");
+        }
+
+        const codeMirrorInstance = this.getCodeMirrorInstance();
+
+        this.codeMirror = codeMirrorInstance.fromTextArea(textareaNode, this.props.options);
+        this.codeMirror.on("change", this.codemirrorValueChanged);
+        this.codeMirror.on("focus", this.focusChanged.bind(this, true));
+        this.codeMirror.on("blur", this.focusChanged.bind(this, false));
+        this.codeMirror.on("scroll", this.scrollChanged);
+        this.codeMirror.setValue(this.props.defaultValue || this.props.value || "");
     }
 
     private focusChanged = (focused) => {

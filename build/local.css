@@ -172,6 +172,10 @@
     padding-right: 16px;
 }
 
+.toolbar-title-text--1Yy03 {
+    font-family: Roboto Mono;
+}
+
 .mdc-dialog--open {
     /* Codemirror has z-index > 3 */
     z-index: 12 !important;

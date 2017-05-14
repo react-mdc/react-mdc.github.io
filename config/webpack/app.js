@@ -70,10 +70,23 @@ module.exports = {
     },
     module: {
         loaders: [
+            /* Typescript */
             {
-                test: /\.(ts|tsx)$/,
+                test: /\.tsx?$/,
                 exclude: /(node_modules)|(\.example\.tsx?$)/,
-                loader: "awesome-typescript-loader"
+                loader: "awesome-typescript-loader",
+                options: {
+                    useCache: true,
+                }
+            },
+            {
+                test: /\.tsx?$/,
+                exclude: /(node_modules)|(\.example\.tsx?$)/,
+                enforce: 'pre',
+                loader: 'tslint-loader',
+                options: {
+                    emitErrors: true
+                }
             },
             /* Styles */
             {
