@@ -121,11 +121,11 @@
 .table--2Mn1V td, .table--2Mn1V th {
     padding: 8px;
 }
-.layout--6c7P1 {
+.layout--t8i-s {
     width: 100%;
 }
 
-.content-layout--2XxzE {
+.content-layout--101io {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -135,7 +135,7 @@
             flex-direction: row;
 }
 
-.drawer-layout--LRqM_ {
+.drawer-layout--1ZIBG {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     z-index: 10;
@@ -143,7 +143,7 @@
     height: auto;
 }
 
-.inner-layout--25IYE {
+.inner-layout--1sLwP {
     width: 100%;
     min-width: 512px;
     padding-left: 16px;
@@ -152,27 +152,27 @@
     padding-right: 16px;
 }
 
-.drawer--htI6R {
+.drawer--3czl1 {
 }
 
-.toolbar--2ek3A {
+.toolbar--dhLM7 {
     /* Codemirror has z-index > 3 */
     z-index: 11 !important;
     z-index: calc(10 + 1) !important;
     z-index: calc(10 + 1) !important;
 }
 
-.toolbar-title--1Kf8K {
+.toolbar-title--1l4FR {
     color: white;
     color: white;
     text-decoration: none;
 }
 
-.toolbar-icon--14E40 {
+.toolbar-icon--1mmWv {
     padding-right: 16px;
 }
 
-.toolbar-title-text--1Yy03 {
+.toolbar-title-text--jOFB_ {
     font-family: Roboto Mono;
 }
 
