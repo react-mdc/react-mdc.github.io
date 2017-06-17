@@ -11674,11 +11674,6 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background,
   background-color: #64DD17 !important;
   background-color: var(--mdc-theme-accent, #64DD17) !important; }
 
-:root {
-  --app-section-margin: 16px;
-  --app-section-padding: 16px;
-  --app-api-table-border-color: #CCC; }
-
 .app--theme-dark--2FVUJ {
   background: #212121; }
   .app--theme-dark--theme-dark--2rTcz,
@@ -11780,12 +11775,12 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background,
     border: 0;
     border-bottom: 1px;
     border-style: solid;
-    border-color: var(--app-api-table-border-color); }
+    border-color: #CCC; }
   .table--21H8G tbody tr {
     border: 0;
     border-bottom: 1px;
     border-style: solid;
-    border-color: var(--app-api-table-border-color); }
+    border-color: #CCC; }
     .table--21H8G tbody tr:last-child {
       border-bottom: 0; }
     .table--21H8G tbody tr:hover {
@@ -12025,7 +12020,7 @@ fieldset:disabled .mdc-radio__native-control + .mdc-radio__background,
 
 .toolbar--37-mi {
   /* Codemirror has z-index > 3 */
-  z-index: calc(var(--app-drawer-z-index) + 1) !important; }
+  z-index: 4; }
 
 .toolbar-title--MAxDW {
   text-decoration: none; }
